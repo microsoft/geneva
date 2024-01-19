@@ -1,0 +1,183 @@
+body {
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    height: 100%;
+    margin: 0;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+
+.text_notes {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: right;
+    padding: 5px;
+    color: black;
+}
+
+.node {  
+    cursor: pointer;
+}
+
+.node_title {
+  font-size: 30px;
+  color: black;
+  font-family: sans-serif;
+}
+
+.link {  
+    stroke: #999;  
+    stroke-opacity: 0.6;  
+} 
+
+.selected {  
+    stroke: red;  
+    stroke-opacity: 1;  
+}  
+
+.textarea-container {
+  text-align: center;
+  display: none;
+}
+
+.textarea-container textarea {
+    font-size: 20px;
+    font-family: sans-serif;
+    width: 100%;  
+    resize: none;
+    background-color: white;
+}
+
+.textarea-container label {
+  font-size: 15px;
+  font-family: sans-serif;
+  padding-right: 5px;
+}
+
+label {
+color: black;
+font-size: 25px;
+}
+
+button {
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 8px;
+  background-color:  #aec6cf;
+  color: #000;
+  margin-right:20px;
+}
+
+button:focus {
+  outline: none;
+  border: 4px solid #000;
+  background-color: greenyellow;
+  color: #000;
+}
+
+.buttons {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin: 38px 20px 20px 40px;
+}
+
+.collapse {
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+}
+
+#graph {
+  right: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+  
+.design-group label {
+  display: block;
+  text-align: center; 
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.design-group select {
+  display: block;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  background-color: white;
+}
+
+.design-container {  
+  display: flex;  
+  justify-content: center; 
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.design-group {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: flex-start;
+  flex: 1 1 160px;  
+  margin: 10px;  
+  text-align: center;  
+}  
+
+.box-1, .box-2 {
+  padding: 2px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 20px 30px;
+
+}
+
+.link-container a {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    padding: 0px 5px;
+    margin: 20px 0px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .box-2 {
+    float: none;
+    flex-direction: column;
+  }
+}
+
+.nr_beat {
+  pointer-events: none;
+}
+
+.label, .beat_title, .arrow_marker {
+  forced-color-adjust: auto;
+}
+
+.option {
+  display: inline-block;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  border: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}

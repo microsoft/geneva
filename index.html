@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Visualizing Generated Narratives</title>  
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webcola@3.4.0/WebCola/cola.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/circular-json@0.5.9/build/circular-json.node.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>
+    <h1 class="visually-hidden">Title</h1>
+    <div role="banner" class="title">Visualizing Generated Narratives</div>
+
+    <h2 class="visually-hidden">Drop Lists</h2>
+        <div class="design-container">
+            <div class="box-1">
+                <div role="list" class="design-group">
+                    <label for="fav-fairytales">Stories</label>
+                    <select id="fav-fairytales" name="fav-fairytales">
+                    </select> 
+                </div>                
+            </div>
+            <div class="box-2">
+                <div role="list" class="design-group">
+                    <label for="fav-starts">Starts</label>
+                    <select id="fav-starts" name="fav-starts">
+                    </select> 
+                </div>
+                <div role="list" class="design-group">
+                    <label for="fav-endings">Endings</label>
+                    <select id="fav-endings" name="fav-endings">
+                    </select> 
+                </div>
+                <div role="list" class="design-group">
+                    <label for="fav-storylines">Plots</label>
+                    <select id="fav-storylines" name="fav-storylines">
+                    </select> 
+                </div>
+                <div role="list" class="design-group">
+                    <label for="fav-grounded-on">Context</label>
+                    <select id="fav-grounded-on" name="fav-grounded-on">
+                    </select> 
+                </div>
+            </div>
+            <h2 class="visually-hidden">Buttons</h2>
+            <div role="region" class="buttons">            
+                <button role="button" id="getGraphButton">Show graph</button>
+                <button role="button" aria-live="polite" aria-expanded="false" id="toggleTextAreaButton" class="collapse">Show details</button>
+            </div>
+        </div>
+            <h3 class="visually-hidden">Text Area for Details</h3>
+            <div role="region" class="textarea-container">
+                <textarea aria-live="polite" aria-labelledby="textarea-container" id="inputDesign" rows="15" cols="60"></textarea>
+             </div>
+        <div class="text_notes"> Scroll to zoom </class>        
+        <h4 class="visually-hidden">Graph: this is the area where the nodes graph will be rendered.</h4>
+        <div role="img" id="graph"></div>
+        <h5 class="visually-hidden">Footer</h5>
+        <footer>
+                <div role="navigation" class="link-container">
+                <a href="mailto:MSR-Emergence@microsoft.com" title="Contact Us via e-mail">Contact Us</a> | 
+                <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" title="Privacy and Cookies Statement">Privacy & Cookies</a> | 
+                <a href="https://go.microsoft.com/fwlink/?LinkID=206977" target="_blank" rel="noopener noreferrer" title="Terms of Use">Terms of Use</a> | 
+                <a href="https://www.microsoft.com/trademarks" target="_blank" rel="noopener noreferrer" title="Trademarks">Trademarks</a> | 
+                ©<2023> Microsoft
+            </div>
+        </footer>
+    <script type="module" src="./graphActions.js"></script>
+</body>  
+</html>
